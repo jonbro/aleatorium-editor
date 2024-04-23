@@ -26,7 +26,7 @@ defineExpose({
 <template>
     <v-ace-editor
         ref="aceRef" 
-        style="height: 100vh"
+        style="height: 100%"
         v-model:value="content"
         lang="lua"
         theme="monokai" />

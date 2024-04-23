@@ -74,7 +74,7 @@
 
 </script>
 <template>
-  <header>
+  <header style="height:3vh">
     <button id="connectButton" type="button" @click="connectToSerial">connect to serial</button>
     <button id="runButton" type="button" @click="runScript">run (ctrl+p)</button>
 <!--         <div class="header-item" style="display: flex; flex-direction: row; align-items: center;">
@@ -82,9 +82,9 @@
       <p>MGLUE</p>
     </div> -->
   </header>
-  <splitpanes class="default-theme" vertical style="width: 100vw">
+  <splitpanes class="default-theme" vertical style="width: 100vw; height:96vh">
     <pane><Editor ref="editor"/></pane>
-    <pane style="height:100vh">
+    <pane>
       <splitpanes class="default-theme" horizontal>
         <pane>"docs"</pane>
         <pane>
@@ -98,6 +98,7 @@
 
 <style scoped>
 #app{
+  overflow: clip;
   margin: 0;
   padding: 0;
   max-width: 100%;
