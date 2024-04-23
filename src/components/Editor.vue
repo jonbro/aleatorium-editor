@@ -12,6 +12,15 @@ onMounted(() => {
     if("ctrl-p" in editor.keyBinding.$handlers[0].commandKeyBinding)
         delete editor.keyBinding.$handlers[0].commandKeyBinding["ctrl-p"];
 })
+function getEditorContent() {
+    var editor = aceRef.value.getAceInstance();
+    return editor.getValue();
+}    
+
+defineExpose({
+    getEditorContent
+});
+
 </script>
 
 <template>
