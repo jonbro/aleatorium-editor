@@ -22,7 +22,8 @@ const props = defineProps(['dataItems'])
 
 <style scoped>
 #console{
-    height: 100%;
+    align-self: stretch;
     overflow: auto;
+    flex: 1 1 auto;
 }
 </style>

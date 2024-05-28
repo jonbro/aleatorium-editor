@@ -16,9 +16,14 @@ function getEditorContent() {
     var editor = aceRef.value.getAceInstance();
     return editor.getValue();
 }    
+function setEditorContent(v) {
+    var editor = aceRef.value.getAceInstance();
+    return editor.setValue(v);
+}    
 
 defineExpose({
-    getEditorContent
+    getEditorContent,
+    setEditorContent
 });
 
 </script>
