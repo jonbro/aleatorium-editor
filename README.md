@@ -1,7 +1,5 @@
-# Vue 3 + Vite
+# Aleatorium Editor
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Editor for [Aleatorium Firmware](https://github.com/jonbro/aleatorium/) - see that repo for more information.
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+[The editor is without building here](https://jonbro.github.io/aleatorium-editor/). It requires a non-firefox based browser due to relying on WebSerial.
