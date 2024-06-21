@@ -152,6 +152,14 @@
     }
 
   }
+  function InsertParam(event)
+  {
+    editor.value.insertAtCursor("param."+event.target.innerText);
+  }
+  function InsertShape(event)
+  {
+    editor.value.insertAtCursor("shape."+event.target.innerText);
+  }
   function onInputField()
   {
     var commandSplit = inputField.value.split(" ");
@@ -196,13 +204,87 @@
     <pane><Editor ref="editor"/></pane>
     <pane>
       <splitpanes class="default-theme" horizontal>
-        <pane>"docs"</pane>
+        <pane>
+          <h3>params</h3>
+          <button @click="InsertParam">timbre</button>
+          <button @click="InsertParam">color</button>
+          <button @click="InsertParam">cutoff</button>
+          <button @click="InsertParam">resonance</button>
+          <button @click="InsertParam">volume</button>
+          <button @click="InsertParam">pan</button>
+          <button @click="InsertParam">attackTime</button>
+          <button @click="InsertParam">decayTime</button>
+          <button @click="InsertParam">attackTime2</button>
+          <button @click="InsertParam">decayTime2</button>
+          <button @click="InsertParam">LFORate</button>
+          <button @click="InsertParam">LFODepth</button>
+          <button @click="InsertParam">retriggerSpeed</button>
+          <button @click="InsertParam">retriggerLength</button>
+          <button @click="InsertParam">env1Target</button>
+          <button @click="InsertParam">env1Depth</button>
+          <button @click="InsertParam">env2Target</button>
+          <button @click="InsertParam">env2Depth</button>
+          <button @click="InsertParam">lfo1Target</button>
+          <button @click="InsertParam">retriggerFade</button>
+          <button @click="InsertParam">length</button>
+          <button @click="InsertParam">conditionMode</button>
+          <button @click="InsertParam">conditionData</button>
+          <button @click="InsertParam">delaySend </button>
+          <button @click="InsertParam">reverbSend</button>
+          <button @click="InsertParam">shape</button>
+          <h3>shapes</h3>
+          <button @click="InsertShape">csaw</button>
+          <button @click="InsertShape">morph</button>
+          <button @click="InsertShape">saw_square</button>
+          <button @click="InsertShape">sine_triangle</button>
+          <button @click="InsertShape">buzz</button>
+          <button @click="InsertShape">square_sub</button>
+          <button @click="InsertShape">saw_sub</button>
+          <button @click="InsertShape">square_sync</button>
+          <button @click="InsertShape">saw_sync</button>
+          <button @click="InsertShape">triple_saw</button>
+          <button @click="InsertShape">triple_square</button>
+          <button @click="InsertShape">triple_triangle</button>
+          <button @click="InsertShape">triple_sine</button>
+          <button @click="InsertShape">triple_ring_mod</button>
+          <button @click="InsertShape">saw_swarm</button>
+          <button @click="InsertShape">toy</button>
+          <button @click="InsertShape">digital_filter_lp</button>
+          <button @click="InsertShape">digital_filter_pk</button>
+          <button @click="InsertShape">digital_filter_bp</button>
+          <button @click="InsertShape">digital_filter_hp</button>
+          <button @click="InsertShape">vosim</button>
+          <button @click="InsertShape">vowel</button>
+          <button @click="InsertShape">vowel_fof</button>
+          <button @click="InsertShape">harmonics</button>
+          <button @click="InsertShape">fm</button>
+          <button @click="InsertShape">feedback_fm</button>
+          <button @click="InsertShape">chaotic_feedback_fm</button>
+          <button @click="InsertShape">struck_bell</button>
+          <button @click="InsertShape">struck_drum</button>
+          <button @click="InsertShape">kick</button>
+          <button @click="InsertShape">cymbal</button>
+          <button @click="InsertShape">snare</button>
+          <button @click="InsertShape">wavetables</button>
+          <button @click="InsertShape">wave_map</button>
+          <button @click="InsertShape">wave_line</button>
+          <button @click="InsertShape">wave_paraphonic</button>
+          <button @click="InsertShape">filtered_noise</button>
+          <button @click="InsertShape">twin_peaks_noise</button>
+          <button @click="InsertShape">clocked_noise</button>
+          <button @click="InsertShape">granular_cloud</button>
+          <button @click="InsertShape">particle_noise</button>
+          <button @click="InsertShape">digital_modulaton</button>
+          <h3>envTargets</h3>
+          <h3>params</h3>
+          
+        </pane>
         <pane style="flex-direction: column; display:flex;">
           <Console :dataItems="returnLines"/>
           <textarea style=" flex: 0 1 1.2em; width:100%;min-height: 1.2em;" v-model="inputField" @keydown.enter="onInputField"  @keyup.enter="clearInput"></textarea>
         </pane>
       </splitpanes>
-    </pane>
+    </pane>2
   </splitpanes>
 </template>
 

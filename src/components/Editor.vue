@@ -20,10 +20,15 @@ function setEditorContent(v) {
     var editor = aceRef.value.getAceInstance();
     return editor.setValue(v);
 }    
-
+function insertAtCursor(v){
+    var editor = aceRef.value.getAceInstance();
+    editor.session.insert(editor.getCursorPosition(), v);
+    editor.focus();
+}
 defineExpose({
     getEditorContent,
-    setEditorContent
+    setEditorContent,
+    insertAtCursor
 });
 
 </script>
